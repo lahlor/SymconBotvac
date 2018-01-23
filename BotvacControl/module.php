@@ -21,7 +21,7 @@ class BotvacControl extends IPSModule
             $this->CreateToken();
         }
 
-        $url = 'https://vorwerk-beehive-production.herokuapp.com/dashboard';
+        $url = 'https://beehive.neatocloud.com/dashboard';
         $params = array();
         $headers = array();
         $headers[] = "Accept: application/json";
@@ -70,7 +70,7 @@ class BotvacControl extends IPSModule
 
     private function CreateToken()
     {
-        $url = 'https://vorwerk-beehive-production.herokuapp.com/sessions';
+        $url = 'https://beehive.neatocloud.com/sessions';
         $params = array();
         $params['platform'] = 'ios';
         $params['email'] = $this->ReadPropertyString('Email');
